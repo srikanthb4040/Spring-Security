@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "3b8d531a-cb05-4e27-bd52-5e73f758f67e",
+		"name": "Spring security",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:4010/test",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "CosV1sLhnvPauEfeppbgnuSn9HQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4010/test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4010",
+					"path": [
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4010/oauth/token?username=a&password=p&grant_type=password",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "tech",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "slokamTech",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:4010/oauth/token?username=a&password=p&grant_type=password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4010",
+					"path": [
+						"oauth",
+						"token"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "a"
+						},
+						{
+							"key": "password",
+							"value": "p"
+						},
+						{
+							"key": "grant_type",
+							"value": "password"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
